@@ -2,24 +2,83 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="点五是一个以沟通为己任的互动实验室，以创意为主导，坚持独立运营，我们致力于为那些坚信自身品牌的价值并致力于建设长期而深入的消费者关系的客户提供互动创意解决方案。我们不遗余力地打造既具影响力又赋文化内涵的作品。" />
 <link rel="shortcut icon" href="/favicon.png" />
 <title>Dotfive 点五</title>
 <style type="text/css">
 <!-- 
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    font-family: 微软雅黑, 宋体, 黑体;
+    color: #535353;
+    margin: 0px; 
+}
+body {
+    white-space: nowrap;
+    text-align: center;
+}
 div {
-	position:absolute;
-	top:50%;
-	left:50%;
-	margin:-150px 0 0 -200px;
-	width:250px;
+    display: inline-block;
+ *display:inline;
+ *zoom:1;
+}
+.verticalAlign {
+    vertical-align: middle;
+    height: 100%;
+    width: 0px;
+    border: none;
+    padding: 0px;
+    margin: 0px 0px 0px -5px;
+}
+.divAll {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+}
+.divBody {
 	height:250px;
-	border:1px solid #008800;
-	}
+    width: 250px;
+    vertical-align: middle;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+}
+.divTop {
+    height: 100px;
+    min-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: top;
+    display: block;
+}
+.divBottom {
+    width: 100%;
+    min-width: 900px;
+    height: 100px;
+    margin: 0px;
+    vertical-align: bottom;
+    display: block;
+}
 -->
 </style>
 </head>
 
 <body>
-<div><img src="images/dotfive.png" alt="Dotfive 点五" title="Dotfive 点五" width="250" height="250"/></div>
+  <div class="verticalAlign"></div>
+  <div class="divAll">
+        <div id='divTop' class="divTop">
+        </div>
+        <div id='divBody' class="divBody">
+        <img src="images/dotfive.png" alt="Dotfive 点五" title="Dotfive 点五" width="250" height="250"/>
+        </div>
+        <div id='divBottom' class="divBottom">
+        </div>
+  </div>
+<div></div>
 </body>
 </html>
