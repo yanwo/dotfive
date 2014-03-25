@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>我有我观点，我是事实派！ ——腾讯新闻 事实派</title>
+<meta name="viewport" content="width=640,maximum-scale=0.5,minimum-scale=0.5">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="format-detection" content="telephone=no">
+<!--<link rel="apple-touch-icon-precomposed" href="http://mat1.gtimg.com/www/mb/images/microblog_72_72.png"/>
+<link rel="shortcut icon" href="http://mat1.gtimg.com/www/mb/favicon.ico"/>-->
+<link rel="stylesheet" href="css/mobile.css" type="text/css" />
+<script src="script/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="script/mobile-plugin.js"></script>
+<script src="http://qzs.qq.com/tencentvideo_v1/js/tvp/tvp.player_lite.js"></script>
+<script src="script/mobile.js"></script>
+<script>
+//,"http://v.qq.com/iframe/player.html?vid=z0118v2z5rb&tiny=0" zhanht
+//,"z0118v2z5rb"
+var _Arr = {
+	"huangxm":["http://v.qq.com/iframe/player.html?vid=q0117o652ff&tiny=0","q0117o652ff"],
+	"liyc":["http://v.qq.com/iframe/player.html?vid=p0117k73ldw&tiny=0","p0117k73ldw"],
+	"yangjl":["http://v.qq.com/iframe/player.html?vid=a0117q1zwy5&tiny=0","a0117q1zwy5"],
+	"chenxm":["http://v.qq.com/iframe/player.html?vid=i0118l0m5l4&tiny=0","i0118l0m5l4"],
+	"luocx":["http://v.qq.com/iframe/player.html?vid=g0118gyxcrc&tiny=0","g0118gyxcrc"],
+	"liugl":["http://v.qq.com/iframe/player.html?vid=a01185ut1eg&tiny=0","a01185ut1eg"],
+	"zhanggp":["http://v.qq.com/iframe/player.html?vid=j0118et6a6m&tiny=0","j0118et6a6m"],
+	"zhanht":["http://v.qq.com/iframe/player.html?vid=p0126cttrw4&tiny=0","p0126cttrw4"]
+	};
+$().ready(function(e) {
+	var u = navigator.userAgent, app = navigator.appVersion,_iPhone = u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    $('.video').each(function(index, element) {
+		var _this = this,_id=$(this).parents('.person').attr('id');
+		console.log(_id)
+		if(!_Arr[_id])return;
+        //!!_Arr&&!!_Arr[index]&&$(this).attr('href',_Arr[index]);
+		if(_iPhone){
+			var v = new tvp.VideoInfo();
+			v.setVid(_Arr[_id][1]);
+			v.getMP4Url(function(a){
+				$(_this).attr('href',a);
+			},function(){});
+		}else{
+			!!_Arr[_id]&&$(this).attr('href',_Arr[_id][0]);
+		}
+    });
+});
+</script>
+</head>
+<body>
+<script>window.__img__=new Image();__img__.src="images/loading.gif";</script>
+<div class="main">
+	<div class="topbg" style="top:-100%;position:absolute;left:0%;display:none;">
+    	<img src="http://mat1.gtimg.com/wbzt/factnews/images/mobile/bighead.jpg" width="100%">
+	</div>
+	<div class="wrapper def">
+		<div class="container">
+			<div id="view1" class="view def cur">
+				<div class="view_bg"><img src="images/view1/bg.jpg" type="bg" data-w="640" data-h="1008"></div>
+				<div class="head"><img src="images/view1/head.png"></div>
+				<div class="text"><img src="images/view1/text.png"></div>
+				<div class="load"></div>
+				<div class="tip"><img src="images/up.gif"></div>
+			</div>
+			<div id="view2" class="view">
+				<div class="view_bg"><img src="images/view2/bg.jpg" type="bg" data-w="640" data-h="1008"></div>
+				<div class="list">
+					<ul class="left">
+						<li><a href="javascript:;" data-p="wangzl"><img src="images/view2/wangzl.png"></a></li>
+						<li><a href="javascript:;" data-p="huangb"><img src="images/view2/huangb.png"></a></li>
+						<li class="last"><a href="javascript:;" data-p="shangwj"><img src="images/view2/shangwj.png"></a></li>
+					</ul>
+					<ul class="right">
+						<li><a href="javascript:;" data-p="yuanws"><img src="images/view2/yuanws.png"></a></li>
+						<li><a href="javascript:;" data-p="jiangyp"><img src="images/view2/jiangyp.png"></a></li>
+						<li class="last"><a href="javascript:;" data-p="liyb"><img src="images/view2/liyb.png"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="view3" class="view">
+				<div class="view_bg"><img src="images/view3/bg.jpg" type="bg" data-w="640" data-h="1008"></div>
+				<div class="list">
+					<ul class="left">
+						<li><a href="javascript:;" data-p="yangjl"><img src="images/view3/yangjl.png"></a></li>
+						<li><a href="javascript:;" data-p="liyc"><img src="images/view3/liyc.png"></a></li>
+						<li><a href="javascript:;" data-p="huangxm"><img src="images/view3/huangxm.png"></a></li>
+						<li class="last"><a href="javascript:;" data-p="liugl"><img src="images/view3/liugl.png"></a></li>
+					</ul>
+					<ul class="right">
+						<li><a href="javascript:;" data-p="zhanht"><img src="images/view3/zhanht.png"></a></li>
+						<li><a href="javascript:;" data-p="luocx"><img src="images/view3/luocx.png"></a></li>
+						<li><a href="javascript:;" data-p="chenxm"><img src="images/view3/chenxm.png"></a></li>
+						<li class="last"><a href="javascript:;" data-p="zhanggp"><img src="images/view3/zhanggp.png"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="view4" class="view">
+				<div class="cont1">
+					<div class="join"><img src="images/view4/join.png"></div>
+					<div class="text"><img src="images/view4/text.png"></div>
+				</div>
+				<div class="cont2">
+					<div class="head"><img src="images/view4/head.png"></div>
+					<div class="down"><img src="images/view4/logo.png"><img src="images/view4/down.png"><a href="http://news.qq.com/mobile/" class="B_down"></a></div>
+					<div><img src="images/view4/tip.png"></div>
+				</div>
+			</div>
+		</div>
+		<a href="javascript:;" class="B_dir B_up"><img src="images/down.png"></a>
+		<a href="javascript:;" class="B_dir B_down"><img src="images/up.png"></a>
+		<ul class="nav"><li class="cur"></li><li></li><li></li><li></li></ul>
+	</div>
+	<div id="wrapper1" class="wrapper">
+		<div id="wangzl" class="person">
+			<div class="head"><img class="bg" src="images/person/wangzl.jpg"></div>
+			<div class="infos">
+				<div class="name"><img src="images/person/wangzl_n.png"></div>
+				<p>从当年票房与话题兼收的《手机》、《天下无贼》，到如今摘得年度票房冠军的《西游降魔篇》、贺岁档冠军《私人订制》，王中磊深谙这样一个简单而又不素的事实，对电影来说，最重要的因素还是内容，把电影拍好一点更重要。这位华谊帝国的铸造者，不断丰富并又实现着电影从业者和国人的对于电影的想象，他也在用事实证明，电影是一个可以实现梦想的行业。</p>
+				<a href="javascript:;" class="close"><img src="images/close.png"></a>
+			</div>
+		</div>
+		<div id="yuanws" class="person">
+			<div class="head"><img class="bg" src="images/person/yuanws.jpg"></div>
+			<div class="infos">
+				<div class="name"><img src="images/person/yuanws_n.png"></div>
+				<p>袁伟时常说“历史在哪里扭曲，就要在哪里突破”，这位饱受争议的八旬老人，一生崇尚“说真话,说自己的话” ，用事实戳破虚妄的历史泡沫，将历史本来面目跃然于纸上并公布于众是他内心的信念。</p>
+				<a href="javascript:;" class="close"><img src="images/close.png"></a>
+			</div>
+		</div>
+		<div id="huangb" class="person">
+			<div class="head"><img class="bg" src="images/person/huangb.jpg"></div>
+			<div class="infos">
+				<div class="name"><img src="images/person/huangb_n.png"></div>
+				<p>从2013年3月黄渤发布的一条吐槽一次性筷子的微博开始，黄渤他用自己的行动传递着一个又一个越来越被大家关注却又不断被遗忘的事实。倡导“筷乐行动”，共同改变生活方式。荧光幕前他用电影语言为大众带来幽默，现实生活里，他也在身体力行不要让环保从名词变成动词的环保宣言。</p>
+				<a href="javascript:;" class="close"><img src="images/close.png"></a>
+			</div>
+		</div>
+		<div id="jiangyp" class="person">
+			<div class="head"><img class="bg" src="images/person/jiangyp.jpg"></div>
+			<div class="infos">
+				<div class="name"><img src="images/person/jiangyp_n.png"></div>
+				<p>江艺平开辟属于自己的读报时代，她用自己最睿智的中年时光，撑起一份100多万份的报纸，一份讲真话、讲事实的报纸。其间经受了多少次艰难的思索，承受了多少各方的压力，但她尝试着尽最大的能力去做，这是一种求之不得的勇气，更是一种难以置信的力量。</p>
+				<a href="javascript:;" class="close"><img src="images/close.png"></a>
+			</div>
+		</div>
+		<div id="shangwj" class="person">
+			<div class="head"><img class="bg" src="images/person/shangwj.jpg"></div>
+			<div class="infos">
+				<div class="name"><img src="images/person/shangwj_n.png"></div>
+				<p>从超级女声的逆袭夺冠到我是歌手的惊艳绽放，在音乐的道路上，无论他人如何质疑，尚雯婕始终坚持“对自我的音乐表达”，用实力捍卫自己“电子唱作人”的不争事实。今天的她，骄傲的以黑马姿态登顶“电音女王”，创作属于自己的节奏。</p>
+				<a href="javascript:;" class="close"><img src="images/close.png"></a>
+			</div>
+		</div>
+		<div id="liyb" class="person">
+			<div class="head"><img class="bg" src="images/person/liyb.jpg"></div>
+			<div class="infos">
+				<div class="name"><img src="images/person/liyb_n.png"></div>
+				<p>作为金牌教练，李永波在承受追捧和赞誉时，也承担着各种压力和监督，他的强势和个性，让他成为大众眼中与众不同的教练，赞誉与批判的漩涡中，更能看清看清竞技体育的现实，了解事实，坚持自己的判断和标准，他创造了羽毛球史上辉煌的传奇。</p>
+				<a href="javascript:;" class="close"><img src="images/close.png"></a>
+			</div>
+		</div>
+		
+		
+		<div id="yangjl" class="person">
+			<div class="head"><img class="bg" src="images/person/yangjl.jpg"><a href="javascript:;" class="video"><img src="images/person/yangjl_v.png"></a></div>
+			<div class="infos">
+				<div class="name"><img src="images/person/yangjl_n.png"></div>
+				<p>事实就是生命、就是责任、就是承担！有良知、有勇气、有智慧，追求事实，是新闻从业者最基本的职业要求，也是最高境界。点击视频，倾听一个资深新闻人的呐喊！支持老杨！</p>
+				<a href="javascript:;" class="close"><img src="images/close.png"></a>
+			</div>
+		</div>
+		<div id="zhanht" class="person">
+			<div class="head"><img class="bg" src="images/person/zhanht.jpg"><a href="javascript:;" class="video"><img src="images/person/zhanht_v.png"></a></div>
+			<div class="infos">
+				<div class="name"><img src="images/person/zhanht_n.png"></div>
+				<p>香港城大授课国粤两兼，双非儿童读书进退两难。涉及到教育问题，每个人都想要绝对的公平。身处不同的环境，人们对公平的要求并不一样。但事实就是事实，不会因为任何人的看法而改变。为了永不退却的追求公正平等，@占海特 选择主动辍学。当外界把这个16岁的少女描述成“问题学生”的时候，她只想让更多人听到她最真实的声音，看清楚事实的真相。</p>
+				<a href="javascript:;" class="close"><img src="images/close.png"></a>
+			</div>
+		</div>
+		<div id="liyc" class="person">
+			<div class="head"><img class="bg" src="images/person/liyc.jpg"><a href="javascript:;" class="video"><img src="images/person/liyc_v.png"></a></div>
+			<div class="infos">
+				<div class="name"><img src="images/person/liyc_n.png"></div>
+				<p>不追逐镜头，却谋杀无数菲林；不盲从规则，却引领文化潮流。说真话，讲事实，不随波逐流，不人云亦云。她是李宇春。如果你不曾喜欢她，或许只因未曾了解她。事实派带你感受李宇春身上那股真实的力量。</p>
+				<a href="javascript:;" class="close"><img src="images/close.png"></a>
+			</div>
+		</div>
+		<div id="luocx" class="person">
+			<div class="head"><img class="bg" src="images/person/luocx.jpg"><a href="javascript:;" class="video"><img src="images/person/luocx_v.png"></a></div>
+			<div class="infos">
+				<div class="name"><img src="images/person/luocx_n.png"></div>
+				<p>每天都有关于盗窃的新闻发生。有人手机被偷，有人钱包被偷。你见过姓名被偷的吗？罗彩霞经历过。钱物找回，生活可以继续；姓名丢过，人生由此不同。从风尚公民到无冕之王，被冒名顶替的经历，转化成追寻事实的力量。事实派为你解读罗彩霞的成长之路……</p>
+				<a href="javascript:;" class="close"><img src="images/close.png"></a>
+			</div>
+		</div>
+		<div id="huangxm" class="person">
+			<div class="head"><img class="bg" src="images/person/huangxm.jpg"><a href="javascript:;" class="video"><img src="images/person/huangxm_v.png"></a></div>
+			<div class="infos">
+				<div class="name"><img src="images/person/huangxm_n.png"></div>
+				<p>他的身高曾是全民谈资，他的英语曾被全民恶搞，他曾被称为毫无演技。但现在，这一切对于黄晓明都闹太套。从急躁争辩到淡定调侃，从被封“二哥”到二得可爱，事实派带你走进黄晓明的内心，看他在面对非议和偏见时，是如何坚守事实，走向成熟的。</p>
+				<a href="javascript:;" class="close"><img src="images/close.png"></a>
+			</div>
+		</div>
+		<div id="chenxm" class="person">
+			<div class="head"><img class="bg" src="images/person/chenxm.jpg"><a href="javascript:;" class="video"><img src="images/person/chenxm_v.png"></a></div>
+			<div class="infos">
+				<div class="name"><img src="images/person/chenxm_n.png"></div>
+				<p>高速拦车救狗，佛诞随喜放生。在这个温暖的世界，每一条生命都被珍视。见义勇为层出不尽，民间英雄不胜枚举。也许小悦悦的影子已经模糊，但陈贤妹的眼泪依然清晰。选择忽视事实，就如同见死不救。事实派带你倾听这位老人充满乡音的絮叨……</p>
+				<a href="javascript:;" class="close"><img src="images/close.png"></a>
+			</div>
+		</div>
+		<div id="liugl" class="person">
+			<div class="head"><img class="bg" src="images/person/liugl.jpg"><a href="javascript:;" class="video"><img src="images/person/liugl_v.png"></a></div>
+			<div class="infos">
+				<div class="name"><img src="images/person/liugl_n.png"></div>
+				<p>曾经的乒乓大赛，每一次球起球落都牵动人心。而如今，纵赛事频繁，成败却无大悬疑。看点渐失的比赛，充斥着内定的质疑。事实上刘国梁认为：实力之外，战略也很重要。小球大赛，胜负皆是魅力。而事实，是超越胜负、得失和成败的公正存在。</p>
+				<a href="javascript:;" class="close"><img src="images/close.png"></a>
+			</div>
+		</div>
+		<div id="zhanggp" class="person">
+			<div class="head"><img class="bg" src="images/person/zhanggp.jpg"><a href="javascript:;" class="video"><img src="images/person/zhanggp_v.png"></a></div>
+			<div class="infos">
+				<div class="name"><img src="images/person/zhanggp_n.png"></div>
+				<p>不管有人多么想掩盖事实，也不管有多少人在混淆视听。抽丝剥茧，拨云见日，事实，总会有浮出水面的一天。我们作为旁观者，看到真相的一刻，或恍然大悟，或意兴阑珊。而对于当事人来说，则是另一番感受。张高平和张辉叔侄10年前蒙冤入狱，10年后事实显露，别人羡慕他们能拿百万国家赔偿，而这对叔侄执念的，仍然是事实。面对这对叔侄的呼喊和挣扎，你是否想将事实尽快看清楚。</p>
+				<a href="javascript:;" class="close"><img src="images/close.png"></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
